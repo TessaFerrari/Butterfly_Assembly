@@ -151,3 +151,18 @@ rule merge:
     resources: mem_mb=75000, mem_mib=71526, disk_mb=7907, disk_mib=7541, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
 
 Job 36 has been submitted with SLURM jobid 18559663 (log: .snakemake/slurm_logs/rule_merge/18559663.log).
+[Wed Dec 20 15:52:52 2023]
+Finished job 36.
+9 of 81 steps (11%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:52:52 2023]
+rule mark_duplicates:
+    input: bamFiles/bamMerged/E6_JUNCOE-BC-007_S93.sorted.merge.bam
+    output: bamFiles/bamMarkDups/E6_JUNCOE-BC-007_S93.sorted.merge.md.bam, bamFiles/bamMarkDups/E6_JUNCOE-BC-007_S93.metrics.md.txt
+    jobid: 35
+    reason: Input files updated by another job: bamFiles/bamMerged/E6_JUNCOE-BC-007_S93.sorted.merge.bam
+    wildcards: bn2=E6_JUNCOE-BC-007_S93
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=7595, disk_mib=7244, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 35 has been submitted with SLURM jobid 18559673 (log: .snakemake/slurm_logs/rule_mark_duplicates/18559673.log).
