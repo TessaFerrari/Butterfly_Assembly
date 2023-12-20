@@ -1,0 +1,153 @@
+nohup: ignoring input
+Config file config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+LockException:
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/scratch2/tferrari/Project-ButterflyAssembly
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+nohup: ignoring input
+Config file config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Job stats:
+job                count
+---------------  -------
+all                    1
+index                 25
+mark_duplicates       18
+merge                 17
+read_groups           20
+total                 81
+
+Select jobs to execute...
+
+[Wed Dec 20 14:56:15 2023]
+rule read_groups:
+    input: bamFiles/bamMarkDups/E7_JUNCOE-FO-005_S101.sorted.merge.md.bam
+    output: bamFiles/bamReadGroups/E7_JUNCOE-FO-005_S101.sorted.merge.md.rg.bam
+    jobid: 42
+    reason: Updated input files: bamFiles/bamMarkDups/E7_JUNCOE-FO-005_S101.sorted.merge.md.bam
+    wildcards: bn2=E7_JUNCOE-FO-005_S101
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=7565, disk_mib=7215, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 42 has been submitted with SLURM jobid 18559566 (log: .snakemake/slurm_logs/rule_read_groups/18559566.log).
+[Wed Dec 20 15:05:36 2023]
+Finished job 42.
+1 of 81 steps (1%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:05:36 2023]
+rule merge:
+    input: bamFiles/bamRaw/F4_JUNCOE-SB-011_S78_L003.sorted.bam, bamFiles/bamRaw/F4_JUNCOE-SB-011_S78_L004.sorted.bam
+    output: bamFiles/bamMerged/F4_JUNCOE-SB-011_S78.sorted.merge.bam
+    jobid: 84
+    reason: Updated input files: bamFiles/bamRaw/F4_JUNCOE-SB-011_S78_L003.sorted.bam, bamFiles/bamRaw/F4_JUNCOE-SB-011_S78_L004.sorted.bam
+    wildcards: bn2=F4_JUNCOE-SB-011_S78
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=8106, disk_mib=7731, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 84 has been submitted with SLURM jobid 18559575 (log: .snakemake/slurm_logs/rule_merge/18559575.log).
+[Wed Dec 20 15:11:27 2023]
+Finished job 84.
+2 of 81 steps (2%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:11:27 2023]
+rule merge:
+    input: bamFiles/bamRaw/H4_JUNCOE-SE-001_S80_L003.sorted.bam, bamFiles/bamRaw/H4_JUNCOE-SE-001_S80_L004.sorted.bam
+    output: bamFiles/bamMerged/H4_JUNCOE-SE-001_S80.sorted.merge.bam
+    jobid: 164
+    reason: Updated input files: bamFiles/bamRaw/H4_JUNCOE-SE-001_S80_L003.sorted.bam, bamFiles/bamRaw/H4_JUNCOE-SE-001_S80_L004.sorted.bam
+    wildcards: bn2=H4_JUNCOE-SE-001_S80
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=7575, disk_mib=7225, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 164 has been submitted with SLURM jobid 18559586 (log: .snakemake/slurm_logs/rule_merge/18559586.log).
+[Wed Dec 20 15:17:18 2023]
+Finished job 164.
+3 of 81 steps (4%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:17:18 2023]
+rule index:
+    input: bamFiles/bamReadGroups/E7_JUNCOE-FO-005_S101.sorted.merge.md.rg.bam
+    output: bamFiles/bamReadGroups/E7_JUNCOE-FO-005_S101.sorted.merge.md.rg.bam.bai
+    jobid: 41
+    reason: Input files updated by another job: bamFiles/bamReadGroups/E7_JUNCOE-FO-005_S101.sorted.merge.md.rg.bam
+    wildcards: bn2=E7_JUNCOE-FO-005_S101
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=7650, disk_mib=7296, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 41 has been submitted with SLURM jobid 18559607 (log: .snakemake/slurm_logs/rule_index/18559607.log).
+[Wed Dec 20 15:18:09 2023]
+Finished job 41.
+4 of 81 steps (5%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:18:09 2023]
+rule merge:
+    input: bamFiles/bamRaw/G12_AGRVAN-FL-009_S143_L003.sorted.bam, bamFiles/bamRaw/G12_AGRVAN-FL-009_S143_L004.sorted.bam
+    output: bamFiles/bamMerged/G12_AGRVAN-FL-009_S143.sorted.merge.bam
+    jobid: 116
+    reason: Updated input files: bamFiles/bamRaw/G12_AGRVAN-FL-009_S143_L003.sorted.bam, bamFiles/bamRaw/G12_AGRVAN-FL-009_S143_L004.sorted.bam
+    wildcards: bn2=G12_AGRVAN-FL-009_S143
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=5906, disk_mib=5633, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 116 has been submitted with SLURM jobid 18559608 (log: .snakemake/slurm_logs/rule_merge/18559608.log).
+[Wed Dec 20 15:22:39 2023]
+Finished job 116.
+5 of 81 steps (6%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:22:39 2023]
+rule mark_duplicates:
+    input: bamFiles/bamMerged/G12_AGRVAN-FL-009_S143.sorted.merge.bam
+    output: bamFiles/bamMarkDups/G12_AGRVAN-FL-009_S143.sorted.merge.md.bam, bamFiles/bamMarkDups/G12_AGRVAN-FL-009_S143.metrics.md.txt
+    jobid: 115
+    reason: Input files updated by another job: bamFiles/bamMerged/G12_AGRVAN-FL-009_S143.sorted.merge.bam
+    wildcards: bn2=G12_AGRVAN-FL-009_S143
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=5748, disk_mib=5482, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 115 has been submitted with SLURM jobid 18559610 (log: .snakemake/slurm_logs/rule_mark_duplicates/18559610.log).
+[Wed Dec 20 15:33:30 2023]
+Finished job 115.
+6 of 81 steps (7%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:33:30 2023]
+rule merge:
+    input: bamFiles/bamRaw/H9_AGRVAN-KM-006_S120_L003.sorted.bam, bamFiles/bamRaw/H9_AGRVAN-KM-006_S120_L004.sorted.bam
+    output: bamFiles/bamMerged/H9_AGRVAN-KM-006_S120.sorted.merge.bam
+    jobid: 196
+    reason: Updated input files: bamFiles/bamRaw/H9_AGRVAN-KM-006_S120_L004.sorted.bam, bamFiles/bamRaw/H9_AGRVAN-KM-006_S120_L003.sorted.bam
+    wildcards: bn2=H9_AGRVAN-KM-006_S120
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=5973, disk_mib=5697, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 196 has been submitted with SLURM jobid 18559636 (log: .snakemake/slurm_logs/rule_merge/18559636.log).
+[Wed Dec 20 15:38:01 2023]
+Finished job 196.
+7 of 81 steps (9%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:38:01 2023]
+rule mark_duplicates:
+    input: bamFiles/bamMerged/H9_AGRVAN-KM-006_S120.sorted.merge.bam
+    output: bamFiles/bamMarkDups/H9_AGRVAN-KM-006_S120.sorted.merge.md.bam, bamFiles/bamMarkDups/H9_AGRVAN-KM-006_S120.metrics.md.txt
+    jobid: 195
+    reason: Input files updated by another job: bamFiles/bamMerged/H9_AGRVAN-KM-006_S120.sorted.merge.bam
+    wildcards: bn2=H9_AGRVAN-KM-006_S120
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=5973, disk_mib=5697, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 195 has been submitted with SLURM jobid 18559644 (log: .snakemake/slurm_logs/rule_mark_duplicates/18559644.log).
+[Wed Dec 20 15:47:02 2023]
+Finished job 195.
+8 of 81 steps (10%) done
+Select jobs to execute...
+
+[Wed Dec 20 15:47:02 2023]
+rule merge:
+    input: bamFiles/bamRaw/E6_JUNCOE-BC-007_S93_L003.sorted.bam, bamFiles/bamRaw/E6_JUNCOE-BC-007_S93_L004.sorted.bam
+    output: bamFiles/bamMerged/E6_JUNCOE-BC-007_S93.sorted.merge.bam
+    jobid: 36
+    reason: Updated input files: bamFiles/bamRaw/E6_JUNCOE-BC-007_S93_L003.sorted.bam, bamFiles/bamRaw/E6_JUNCOE-BC-007_S93_L004.sorted.bam
+    wildcards: bn2=E6_JUNCOE-BC-007_S93
+    resources: mem_mb=75000, mem_mib=71526, disk_mb=7907, disk_mib=7541, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=10080, tasks=34
+
+Job 36 has been submitted with SLURM jobid 18559663 (log: .snakemake/slurm_logs/rule_merge/18559663.log).
