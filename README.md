@@ -5,4 +5,3 @@ Run with snakemake on slurm using:
 
 Use flag '-np' to do dry-run and print all rules to be executed
 Use flag '-R copy_fastq' to force-run all rules to regenerate all files
-
